@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "star-wars-people",
+    "slug": "star-wars-people",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "star-wars-people"
+}
