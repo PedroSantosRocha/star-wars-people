@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, StatusBar } from 'react-native';
-import { MotiView } from 'moti';
+import { StyleSheet } from 'react-native';
 
 import { Button } from '../../components/Button';
 import { Signboard } from '../../components/Signboard';
@@ -15,11 +14,6 @@ import {
 export function Home() {
   return (
     <Container>
-      <StatusBar
-        barStyle='light-content'
-        translucent 
-        backgroundColor="transparent"
-      />
       <Image
         source={require("../../assets/background.png")}
         style={[StyleSheet.absoluteFill]}
