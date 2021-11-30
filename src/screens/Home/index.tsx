@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Button } from '../../components/Button';
 import { Signboard } from '../../components/Signboard';
@@ -12,6 +13,8 @@ import {
 } from './styles';
 
 export function Home() {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Image

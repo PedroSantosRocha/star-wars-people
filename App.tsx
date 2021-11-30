@@ -7,7 +7,7 @@ import { useFonts, Aldrich_400Regular } from '@expo-google-fonts/aldrich';
 
 import theme from './src/global/styles/theme';
 
-import { Personages } from './src/screens/Personages';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Aldrich_400Regular });
@@ -23,7 +23,7 @@ export default function App() {
         translucent 
         backgroundColor="transparent"
       />
-      <Personages />
+      <Routes />
     </ThemeProvider>
   );
 }
