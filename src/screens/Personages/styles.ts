@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
@@ -10,7 +11,7 @@ export const Image = styled.ImageBackground``;
 export const PersonagesList = styled(FlatList).attrs({
   contentContainerStyle: {
     padding: 20,
-    justifyContent: 'space-around',
+    paddingBottom: getBottomSpace() + 80,
   },
   showsVerticalScrollIndicator: false,
 })``;

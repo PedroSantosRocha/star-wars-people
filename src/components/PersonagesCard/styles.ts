@@ -3,13 +3,13 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.TouchableOpacity`
-  width: 48%;
-  height: 230px;
+  width: 100%;
+  height: 200px;
 
   background-color: ${({ theme }) => theme.colors.header};
 
   margin-top: ${getStatusBarHeight()}px;
-  border-radius: 7px;
+  border-radius: 20px;
 `;
 
 export const Info = styled.View`
@@ -21,12 +21,12 @@ export const BirthYear = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
   font-size: ${RFValue(16)}px;
 
-  margin-bottom: 140px;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled.Text`
   font-family: ${({ theme }) => theme.fonts.aldrich_400};
-  color: ${({ theme }) => theme.colors.shape};
+  color: ${({ theme }) => theme.colors.text_background};
   font-size: ${RFValue(22)}px;
 `;
 

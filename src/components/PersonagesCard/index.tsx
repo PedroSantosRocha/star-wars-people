@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { MotiView } from 'moti';
 
 import {
   Container,
@@ -21,16 +22,30 @@ interface Props {
 
 export function PersonagesCard({ data}: Props) {
   return (
-    <Container activeOpacity={0.7}>
-      <Photo
-        imageStyle={{ borderRadius: 7}}
-        source={{ uri: data.photo }}
-        style={[StyleSheet.absoluteFill]}
-      />
-      <Info>
-        <BirthYear>{data.birthYear}</BirthYear>
-        <Name>{data.name}</Name>
-      </Info>
-    </Container>
+      <MotiView
+        from={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          type: 'timing',
+          duration: 1500,
+        }}
+      >
+        <Container activeOpacity={0.7}>
+            <Photo
+              imageStyle={{ borderRadius: 20}}
+              source={{ uri: data.photo }}
+              style={[StyleSheet.absoluteFill]}
+              resizeMode='contain'
+            />
+            <Info>
+              <BirthYear>{data.birthYear}</BirthYear>
+              <Name>{data.name}</Name>
+            </Info>
+        </Container>
+      </MotiView>
   );
 }

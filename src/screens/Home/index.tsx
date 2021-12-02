@@ -5,6 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 import { Button } from '../../components/Button';
 import { Signboard } from '../../components/Signboard';
 
+import { StackNavigationProp } from '@react-navigation/stack';
+
 import {
   Container,
   Image,
@@ -12,8 +14,11 @@ import {
   Footer
 } from './styles';
 
-export function Home() {
-  const navigation = useNavigation();
+interface NavigationProps {
+  navigation: StackNavigationProp<any, any>;
+}
+
+export function Home({ navigation }: NavigationProps) {
 
   return (
     <Container>
@@ -40,7 +45,9 @@ export function Home() {
       </Content>
 
       <Footer>
-        <Button title="Ver Personagens" onPress={() => {}}/>
+        <Button
+          title="Ver Personagens"
+          onPress={() => { navigation.navigate('Tabs') }}/>
       </Footer>
     </Container>
   );

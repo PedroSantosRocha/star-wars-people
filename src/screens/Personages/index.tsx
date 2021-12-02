@@ -26,8 +26,6 @@ export function Personages() {
       <PersonagesList
         data={[1,2,3,4,5,6,7,8]}
         keyExtractor={item => String(item)}
-        numColumns={2}
-        columnWrapperStyle={{justifyContent: 'space-between'}}
         renderItem={({ item }) => <PersonagesCard data={personage} />}
       />
 

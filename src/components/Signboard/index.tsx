@@ -25,7 +25,7 @@ export function Signboard() {
         Não apenas acesso a lista,
         mas também a detalhes
         específicos dos personagens,
-        e por fim também poderá
+        e por fim, também poderá
         escolher seus favoritos!
       </SignboardEffect>
     </Container>
