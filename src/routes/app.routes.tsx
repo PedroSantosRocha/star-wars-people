@@ -20,7 +20,7 @@ function TabRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: theme.colors.main,
-        tabBarInactiveTintColor: theme.colors.main_light,
+        tabBarInactiveTintColor: theme.colors.text,
         tabBarStyle: {
           paddingVertical: Platform.OS === 'ios' ? 20 : 0,
           height: 88,
