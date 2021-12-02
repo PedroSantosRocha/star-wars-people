@@ -36,7 +36,7 @@ function TabRoutes() {
         options={{
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons
-              name="home"
+              name="groups"
               size={size}
               color={color}
             />
