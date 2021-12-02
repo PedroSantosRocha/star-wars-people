@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'
 import { useTheme } from 'styled-components';
 import { MotiView } from 'moti';
-import { TouchableOpacityProps } from 'react-native';
 
 import {
   Container,
+  BackButtonModal,
   Image,
   Card,
   Header,
@@ -40,7 +40,7 @@ export function ModalDetails({ data, ...rest }: Props) {
   return (
       <Container>
         <Image
-          source={require("../../assets/backlist.jpeg")}
+          source={require("../../assets/backmodal.jpeg")}
           style={[StyleSheet.absoluteFill]}
         />
 
@@ -57,9 +57,16 @@ export function ModalDetails({ data, ...rest }: Props) {
           }}
           >
 
+          <BackButtonModal {...rest} activeOpacity={0.7}>
+            <MaterialIcons
+              name="expand-more"
+              size={50}
+              color={theme.colors.shape}
+            />
+          </BackButtonModal>
+
           <Photo
             source={{ uri: 'https://rollingstone.uol.com.br/media/_versions/luke_skywalker_div_lucasfilm_widelg.jpg' }}
-            // resizeMode="contain"
           />
 
           <Card>
@@ -78,7 +85,7 @@ export function ModalDetails({ data, ...rest }: Props) {
             </Header>
 
             <Footer>
-              <AreaButton {...rest} activeOpacity={0.7}>
+              <AreaButton activeOpacity={0.7}>
                 <FavoriteButton>
                   <MaterialIcons
                     name="favorite"

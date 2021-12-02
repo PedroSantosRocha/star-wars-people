@@ -9,12 +9,17 @@ export const Container = styled.View`
   justify-content: flex-end;
 `;
 
+export const BackButtonModal = styled.TouchableOpacity`
+  align-self: center;
+
+  margin-bottom: 40px;
+`;
 
 export const Image = styled.ImageBackground``;
 
 export const Card = styled.View`
   width: 100%;
-  height: 500px;
+  height: 450px;
   margin-top: 24px;
 
   background-color: ${({ theme }) => theme.colors.header};
@@ -25,7 +30,7 @@ export const Card = styled.View`
 
 export const Header = styled.View`
   width: 100%;
-  height: 400px;`;
+  height: 350px;`;
 
 export const Infos = styled.View`
   padding: 28px;
@@ -44,6 +49,8 @@ export const Photo = styled.Image`
   height: 180px;
 
   border-radius: 30px;
+
+  opacity: 0.9;
 `;
 
 export const Footer = styled.View`
@@ -67,4 +74,7 @@ export const AreaButton = styled.TouchableOpacity`
   border-radius: 50px;
 `;
 
-export const FavoriteButton = styled.View``;
+export const FavoriteButton = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
