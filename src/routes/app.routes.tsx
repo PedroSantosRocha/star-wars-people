@@ -17,18 +17,18 @@ function TabRoutes() {
 
   return (
     <Tab.Navigator
-    screenOptions={{
-      headerShown: false,
-      tabBarActiveTintColor: theme.colors.main,
-      tabBarInactiveTintColor: theme.colors.main_light,
-      tabBarStyle: {
-        paddingVertical: Platform.OS === 'ios' ? 20 : 0,
-        height: 88,
-        backgroundColor: theme.colors.header,
-        borderRadius: 50,
-        position: 'absolute',
-      },
-    }}
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: theme.colors.main,
+        tabBarInactiveTintColor: theme.colors.main_light,
+        tabBarStyle: {
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0,
+          height: 88,
+          backgroundColor: theme.colors.header,
+          borderRadius: 50,
+          position: 'absolute',
+        },
+      }}
     >
       <Tab.Screen 
         name="Personagens"

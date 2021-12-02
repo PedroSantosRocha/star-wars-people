@@ -38,7 +38,7 @@ export function Home({ navigation }: NavigationProps) {
         }}
         transition={{
           type: 'timing',
-          duration: 15000,
+          duration: 10000,
         }}
       >
         <Signboard />

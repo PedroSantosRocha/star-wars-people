@@ -9,6 +9,7 @@ import theme from './src/global/styles/theme';
 
 import { Routes } from './src/routes';
 
+
 export default function App() {
   const [fontsLoaded] = useFonts({ Aldrich_400Regular });
 

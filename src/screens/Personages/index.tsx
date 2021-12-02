@@ -1,7 +1,8 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { Modal, StyleSheet } from 'react-native';
 
 import { PersonagesCard } from '../../components/PersonagesCard';
+import { ModalDetails } from '../../components/ModalDetails';
 
 import {
   Container,
@@ -10,6 +11,8 @@ import {
 } from './styles';
 
 export function Personages() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const personage = {
     name: 'Luke Skywalker',
     birthYear: '19BBY',
@@ -26,9 +29,25 @@ export function Personages() {
       <PersonagesList
         data={[1,2,3,4,5,6,7,8]}
         keyExtractor={item => String(item)}
-        renderItem={({ item }) => <PersonagesCard data={personage} />}
+        renderItem={({ item }) => (
+          <PersonagesCard
+            onPress={() => setModalVisible(true)}
+            data={personage}
+          />
+        )}
       />
 
+      <Modal
+        presentationStyle="pageSheet"
+        animationType="slide"
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <ModalDetails onPress={() => setModalVisible(!modalVisible)}/>
+      </Modal>
     </Container>
   );
-}
+};
+

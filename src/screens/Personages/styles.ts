@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
+import { FlatList, Modal } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
@@ -15,4 +15,3 @@ export const PersonagesList = styled(FlatList).attrs({
   },
   showsVerticalScrollIndicator: false,
 })``;
-

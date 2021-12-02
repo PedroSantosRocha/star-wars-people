@@ -4,6 +4,7 @@ import { MotiView } from 'moti';
 
 import {
   Container,
+  Personage,
   Info,
   Name,
   BirthYear,
@@ -18,10 +19,12 @@ interface PersonageData {
 
 interface Props {
   data: PersonageData;
+  onPress: () => void;
 }
 
-export function PersonagesCard({ data}: Props) {
+export function PersonagesCard({ data, ...rest }: Props) {
   return (
+    <Container {...rest} activeOpacity={0.7}>
       <MotiView
         from={{
           opacity: 0,
@@ -34,18 +37,19 @@ export function PersonagesCard({ data}: Props) {
           duration: 1500,
         }}
       >
-        <Container activeOpacity={0.7}>
-            <Photo
-              imageStyle={{ borderRadius: 20}}
-              source={{ uri: data.photo }}
-              style={[StyleSheet.absoluteFill]}
-              resizeMode='contain'
-            />
-            <Info>
-              <BirthYear>{data.birthYear}</BirthYear>
-              <Name>{data.name}</Name>
-            </Info>
-        </Container>
+      <Personage>
+        <Photo
+          imageStyle={{ borderRadius: 20}}
+          source={{ uri: data.photo }}
+          style={[StyleSheet.absoluteFill]}
+          resizeMode="contain"
+        />
+        <Info>
+          <BirthYear>{data.birthYear}</BirthYear>
+          <Name>{data.name}</Name>
+        </Info>
+      </Personage>
       </MotiView>
+    </Container>
   );
 }
