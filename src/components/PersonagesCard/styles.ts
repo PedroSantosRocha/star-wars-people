@@ -11,7 +11,7 @@ export const Personage = styled.View`
   background-color: ${({ theme }) => theme.colors.header};
 
   margin-top: ${getStatusBarHeight()}px;
-  border-radius: 20px;
+  border-radius:30px;
 `;
 
 export const Info = styled.View`

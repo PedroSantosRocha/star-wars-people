@@ -39,7 +39,7 @@ export function PersonagesCard({ data, ...rest }: Props) {
       >
       <Personage>
         <Photo
-          imageStyle={{ borderRadius: 20}}
+          imageStyle={{ borderRadius: 30}}
           source={{ uri: data.photo }}
           style={[StyleSheet.absoluteFill]}
           resizeMode="contain"
