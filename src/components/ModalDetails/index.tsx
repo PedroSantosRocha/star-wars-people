@@ -14,7 +14,6 @@ import {
   Photo,
   Footer,
   AreaButton,
-  FavoriteButton,
   Info,
 } from './styles';
 
@@ -86,13 +85,11 @@ export function ModalDetails({ data, ...rest }: Props) {
 
             <Footer>
               <AreaButton activeOpacity={0.7}>
-                <FavoriteButton>
                   <MaterialIcons
                     name="favorite"
                     size={50}
-                    color={theme.colors.shape}
+                    color={theme.colors.main}
                   />
-                </FavoriteButton>
               </AreaButton>
             </Footer>
           </Card>

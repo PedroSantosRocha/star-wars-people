@@ -25,8 +25,10 @@ function TabRoutes() {
           paddingVertical: Platform.OS === 'ios' ? 20 : 0,
           height: 88,
           backgroundColor: theme.colors.header,
-          borderRadius: 50,
+          borderRadius: 30,
           position: 'absolute',
+          borderTopWidth: 1,
+          borderTopColor: theme.colors.header
         },
       }}
     >

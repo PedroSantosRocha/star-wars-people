@@ -23,7 +23,6 @@ export const Card = styled.View`
   margin-top: 24px;
 
   background-color: ${({ theme }) => theme.colors.header};
-  opacity: 0.9;
 
   border-radius: 40px;
 `;
@@ -49,32 +48,19 @@ export const Photo = styled.Image`
   height: 180px;
 
   border-radius: 30px;
-
-  opacity: 0.9;
 `;
 
 export const Footer = styled.View`
   width: 100%;
   height: 100px;
 
-  background-color: ${({ theme }) => theme.colors.shape};
-
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-width: 1px;
+  border-color: ${({ theme }) => theme.colors.main};
 
   align-items: center;
   justify-content: center;
 `;
 
-export const AreaButton = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.main};
-  padding: 10px;
-  border-radius: 50px;
-`;
-
-export const FavoriteButton = styled.View`
-  justify-content: center;
-  align-items: center;
-`;
+export const AreaButton = styled.TouchableOpacity``;
