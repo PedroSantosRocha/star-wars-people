@@ -16,6 +16,7 @@ import {
   AreaButton,
   Info,
 } from './styles';
+import { IconButton } from '../IconButton';
 
 interface PersonageProps {
   name: string;
@@ -39,7 +40,7 @@ export function ModalDetails({ data, ...rest }: Props) {
   return (
       <Container>
         <Image
-          source={require("../../assets/backmodal.jpeg")}
+          source={require("../../assets/backmodal.png")}
           style={[StyleSheet.absoluteFill]}
         />
 
@@ -84,13 +85,12 @@ export function ModalDetails({ data, ...rest }: Props) {
             </Header>
 
             <Footer>
-              <AreaButton activeOpacity={0.7}>
-                  <MaterialIcons
-                    name="favorite"
-                    size={50}
-                    color={theme.colors.main}
-                  />
-              </AreaButton>
+              <IconButton
+                onPress={() => {}}
+                name="favorite"
+                size={50}
+                color={theme.colors.main}
+              />
             </Footer>
           </Card>
         </MotiView>

@@ -8,10 +8,7 @@ export const Personage = styled.View`
   width: 100%;
   height: 200px;
 
-  background-color: ${({ theme }) => theme.colors.header};
-
   margin-top: ${getStatusBarHeight()}px;
-  border-radius:30px;
 `;
 
 export const Info = styled.View`
@@ -34,5 +31,5 @@ export const Name = styled.Text`
 
 export const Photo = styled.ImageBackground`
   width: 100%;
-  height: 100%;
+  height: 200px;
 `;

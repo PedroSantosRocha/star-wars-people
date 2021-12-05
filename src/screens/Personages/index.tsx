@@ -22,7 +22,7 @@ export function Personages() {
   return (
     <Container>
       <Image
-        source={require("../../assets/background.png")}
+        source={require("../../assets/background.jpeg")}
         style={[StyleSheet.absoluteFill]}
       />
 

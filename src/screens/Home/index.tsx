@@ -23,7 +23,7 @@ export function Home({ navigation }: NavigationProps) {
   return (
     <Container>
       <Image
-        source={require("../../assets/backlist.jpeg")}
+        source={require("../../assets/background.jpeg")}
         style={[StyleSheet.absoluteFill]}
       />
 

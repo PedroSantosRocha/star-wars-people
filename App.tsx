@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { ImageBackground, StatusBar, StyleSheet } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 

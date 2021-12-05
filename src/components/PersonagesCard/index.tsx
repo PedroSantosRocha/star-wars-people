@@ -42,7 +42,6 @@ export function PersonagesCard({ data, ...rest }: Props) {
           imageStyle={{ borderRadius: 30}}
           source={{ uri: data.photo }}
           style={[StyleSheet.absoluteFill]}
-          resizeMode="contain"
         />
         <Info>
           <BirthYear>{data.birthYear}</BirthYear>
